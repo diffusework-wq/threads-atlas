@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>話題星圖</title><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <header><span class="mark">✳</span><div><h1>話題星圖</h1><p>你的 Threads 閱讀軌跡</p></div><span class="local">本機</span></header>
+  <main>
+    <div class="setting"><label for="enabled"><strong>自動收錄</strong><small>點開主貼文或留言詳情時收錄</small></label><input id="enabled" type="checkbox" role="switch" aria-describedby="privacy"></div>
+    <p id="privacy" class="privacy">開啟後，只保存你打開的主貼文文字與連結。滑過不收錄，不批次抓取留言，不讀私訊、輸入中的文字或登入憑證。內容留在這個 Chrome，僅供指定星圖網站在你的瀏覽器中讀取。</p>
+    <div class="count"><strong id="count">—</strong><span>篇個人紀錄</span><span id="state">讀取中</span></div>
+    <button id="open" class="primary">開啟我的星圖 ↗</button>
+    <section aria-labelledby="save-heading"><h2 id="save-heading">手動收藏目前貼文</h2><p id="preview-info">正在確認頁面…</p><blockquote id="preview" hidden></blockquote><button id="save" disabled>存入星圖 · 明確收藏</button></section>
+    <button id="export" class="quiet">匯出 JSON 備份</button>
+    <p id="status" role="status" aria-live="polite"></p>
+    <footer>本機版不需要 Meta API 或帳號。卸載插件會移除收藏，請先備份。<br>自動收錄代表曾打開閱讀，不代表喜歡或認同。</footer>
+  </main>
+  <script type="module" src="popup.mjs"></script>
+</body></html>

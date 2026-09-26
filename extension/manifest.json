@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "話題星圖 · Threads 本機收藏",
+  "version": "0.2.0",
+  "description": "在你開啟 Threads 貼文時，依你的設定保存在本機星圖；預設關閉自動收錄。",
+  "minimum_chrome_version": "116",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://www.threads.com/*",
+    "https://threads.com/*",
+    "https://www.threads.net/*",
+    "https://threads.net/*",
+    "http://127.0.0.1/*",
+    "http://localhost/*",
+    "https://diffusework-wq.github.io/threads-atlas/*"
+  ],
+  "background": {
+    "service_worker": "background.mjs",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "話題星圖",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.threads.com/*",
+        "https://threads.com/*",
+        "https://www.threads.net/*",
+        "https://threads.net/*"
+      ],
+      "js": [
+        "dom-helpers.js",
+        "collector.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "http://127.0.0.1/*",
+        "http://localhost/*",
+        "https://diffusework-wq.github.io/threads-atlas/*"
+      ],
+      "js": [
+        "bridge.js"
+      ],
+      "run_at": "document_start"
+    }
+  ]
+}

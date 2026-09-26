@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "enabled": false,
+  "revision": 1,
+  "posts": [
+    {
+      "id": "DZqNVnkkl02",
+      "url": "https://www.threads.com/@xxft_y/post/DZqNVnkkl02",
+      "text": "作者支持外出平均分攤費用，將理由放在賺錢辛苦、互相體諒與尊重。",
+      "author": "xxft_y",
+      "publishedAt": "2026-06-16T20:04:12Z",
+      "savedAt": "2026-09-26T10:32:15.733329+00:00",
+      "lastOpenedAt": "2026-09-26T10:32:15.733329+00:00",
+      "openCount": 1,
+      "manual": true,
+      "tags": [
+        "測試匯入"
+      ],
+      "note": "UI 驗證資料：使用既有公開摘要，並非實際閱讀紀錄。"
+    },
+    {
+      "id": "DOyXSabkvZv",
+      "url": "https://www.threads.com/@jksugarshop/post/DOyXSabkvZv",
+      "text": "作者描述伴侶要求分攤車險，質疑費用責任的界線，並表達結束關係的想法。",
+      "author": "jksugarshop",
+      "publishedAt": "2025-09-19T14:19:44Z",
+      "savedAt": "2026-09-26T10:32:15.733329+00:00",
+      "lastOpenedAt": "2026-09-26T10:32:15.733329+00:00",
+      "openCount": 1,
+      "manual": false,
+      "tags": [
+        "測試匯入"
+      ],
+      "note": "UI 驗證資料：使用既有公開摘要，並非實際閱讀紀錄。"
+    }
+  ]
+}

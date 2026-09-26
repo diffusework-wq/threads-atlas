@@ -1,0 +1,595 @@
+{
+  "version": 1,
+  "capturedAt": "2026-09-26T08:24:00Z",
+  "mode": "curated_public_sample",
+  "note": "資料以搜尋頁可見內容核對，非隨機抽樣；不含按讚數推估，不保證原文永久可用。",
+  "topics": [
+    {
+      "id": "aa",
+      "label": "AA 男",
+      "group": "boundary",
+      "seed": true,
+      "description": "從約會分帳到付出的公平感，看看金錢如何成為關係裡的語言。",
+      "angles": [
+        "AA 制的爭議，分歧在金額還是彼此對付出的理解？",
+        "用「飲料、車費、保險」三種情境，邀請讀者討論分攤界線。",
+        "整理分帳、輪流請客、依能力分攤的不同期待，避免替性別貼標籤。"
+      ]
+    },
+    {
+      "id": "unread",
+      "label": "不讀不回",
+      "group": "emotion",
+      "seed": true,
+      "description": "等待回覆的焦慮、溝通節奏與衝突後的沉默。",
+      "angles": [
+        "訊息沒有回覆時，我們是在等待答案，還是在尋找安心？",
+        "需要冷靜與直接消失，差別可以是一句怎樣的告知？",
+        "以兩種回訊息習慣寫一段對話，討論彼此的時間期待。"
+      ]
+    },
+    {
+      "id": "love",
+      "label": "感情",
+      "group": "relationship",
+      "seed": true,
+      "description": "不同關係經驗交會的入口：理解、信任與共同生活的想像。",
+      "angles": [
+        "把「相處舒服」拆成具體日常：對話、付出與未來規劃。",
+        "從樣本中選兩種不同期待，設計一個不急著判對錯的討論。",
+        "邀請讀者分享一次把需求說清楚的經驗，而不是替伴侶下診斷。"
+      ]
+    },
+    {
+      "id": "marriage",
+      "label": "婚姻問題",
+      "group": "relationship",
+      "seed": true,
+      "description": "共同生活中的期待落差，以及人們如何描述修復或離開。",
+      "angles": [
+        "關係的轉折是一件大事，還是許多小失望累積？",
+        "以共同生活為題，列出婚前值得交換的三個生活期待。",
+        "把「想被理解」改寫成可討論的具體需求，呈現雙方視角。"
+      ]
+    },
+    {
+      "id": "affair",
+      "label": "出軌",
+      "group": "boundary",
+      "seed": true,
+      "description": "關於忠誠、隱瞞、承諾與關係界線的公開討論。",
+      "angles": [
+        "以假設情境討論：結束關係與隱瞞另一段關係，有什麼不同？",
+        "把「信任」落在具體行為，邀請讀者談自己的界線。",
+        "對比雙方事先說好的界線與事後辯解，避免影射特定人物。"
+      ]
+    },
+    {
+      "id": "friendship",
+      "label": "純友誼",
+      "group": "boundary",
+      "seed": true,
+      "description": "異性友誼、親密互動與旁人的愛情預設。",
+      "angles": [
+        "熟悉就等於曖昧嗎？用友誼與愛情的不同期待切入。",
+        "單獨吃飯、每天聊天、互道晚安：界線是否需要雙方協商？",
+        "讓相信與不相信純友誼的人各說一個具體情境。"
+      ]
+    },
+    {
+      "id": "support",
+      "label": "接住情緒",
+      "group": "emotion",
+      "seed": true,
+      "description": "被理解的需要，與陪伴者自身界線之間的討論。",
+      "angles": [
+        "先聽見感受，還是先提出辦法？用同一情境寫兩段回應。",
+        "陪伴是關心還是義務？同時呈現求助者與陪伴者的需求。",
+        "將「我現在沒力氣聽」改寫成有界線又有關心的一句話。"
+      ]
+    },
+    {
+      "id": "breakup",
+      "label": "要不要分手",
+      "group": "relationship",
+      "seed": true,
+      "description": "不捨、未來差異與離開的抉擇，並列觀點而不替人做決定。",
+      "angles": [
+        "捨不得的是這個人，還是已經投入的時間？用提問展開討論。",
+        "相愛卻想要不同未來：把五年後的生活畫成兩張清單。",
+        "邀請讀者談關係轉折的時刻，不把單一經驗變成分手準則。"
+      ]
+    },
+    {
+      "id": "value",
+      "label": "情緒價值",
+      "group": "emotion",
+      "seed": true,
+      "description": "人們如何理解被回應、被支持，以及情感付出的互惠。",
+      "angles": [
+        "情緒價值是安慰的話，還是日常裡看得見的回應？",
+        "當一方一直提供支持，另一方如何回應？以互惠切入。",
+        "從關係延伸到日常服務：一句手寫鼓勵為什麼讓人有感？"
+      ]
+    },
+    {
+      "id": "money",
+      "label": "金錢觀",
+      "group": "boundary",
+      "seed": false,
+      "description": "由分攤、經濟能力與付出期待等樣本延伸出的編輯分類。"
+    },
+    {
+      "id": "fairness",
+      "label": "付出與公平",
+      "group": "boundary",
+      "seed": false,
+      "description": "同樣的付出，可能被雙方用不同的方式衡量。"
+    },
+    {
+      "id": "boundaries",
+      "label": "界線感",
+      "group": "boundary",
+      "seed": false,
+      "description": "樣本中對互動分寸、責任與個人界線的不同理解。"
+    },
+    {
+      "id": "trust",
+      "label": "信任",
+      "group": "boundary",
+      "seed": false,
+      "description": "從友誼、親密關係與承諾討論延伸而來。"
+    },
+    {
+      "id": "communication",
+      "label": "溝通方式",
+      "group": "emotion",
+      "seed": false,
+      "description": "如何說出需求、回覆訊息，以及處理衝突。"
+    },
+    {
+      "id": "security",
+      "label": "安全感",
+      "group": "emotion",
+      "seed": false,
+      "description": "由等待回覆、擔心成為負擔等樣本判讀的概念。"
+    },
+    {
+      "id": "listening",
+      "label": "傾聽與陪伴",
+      "group": "emotion",
+      "seed": false,
+      "description": "樣本裡對情緒支持、理解與陪伴的期待。"
+    },
+    {
+      "id": "future",
+      "label": "未來規劃",
+      "group": "relationship",
+      "seed": false,
+      "description": "共同生活方向與人生計畫是否相容。"
+    },
+    {
+      "id": "sunk",
+      "label": "不捨與投入",
+      "group": "relationship",
+      "seed": false,
+      "description": "當關係走向改變，人們如何面對過去的投入。"
+    },
+    {
+      "id": "daily",
+      "label": "日常儀式",
+      "group": "emotion",
+      "seed": false,
+      "description": "從公開樣本延伸：日常服務中帶來支持感的小動作。"
+    }
+  ],
+  "posts": [
+    {
+      "id": "DZqNVnkkl02",
+      "url": "https://www.threads.com/@xxft_y/post/DZqNVnkkl02",
+      "timestamp": "2026-06-16T20:04:12Z",
+      "summary": "作者支持外出平均分攤費用，將理由放在賺錢辛苦、互相體諒與尊重。",
+      "topics": [
+        "aa",
+        "money",
+        "fairness"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DOyXSabkvZv",
+      "url": "https://www.threads.com/@jksugarshop/post/DOyXSabkvZv",
+      "timestamp": "2025-09-19T14:19:44Z",
+      "summary": "作者描述伴侶要求分攤車險，質疑費用責任的界線，並表達結束關係的想法。",
+      "topics": [
+        "aa",
+        "money",
+        "fairness",
+        "boundaries",
+        "breakup"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DE0I4NoSglH",
+      "url": "https://www.threads.com/@lynn_pipi/post/DE0I4NoSglH",
+      "timestamp": "2025-01-14T17:38:22Z",
+      "summary": "作者詢問情侶偏好的付費方式，列出分帳、單方支付與輪流請客供討論。",
+      "topics": [
+        "aa",
+        "money",
+        "fairness",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DbxyzG4EgEA",
+      "url": "https://www.threads.com/@iyori_520/post/DbxyzG4EgEA",
+      "timestamp": "2026-08-08T11:49:00Z",
+      "summary": "作者描述整天等不到訊息的失落，在想放下與仍然喜歡對方之間掙扎。",
+      "topics": [
+        "unread",
+        "security",
+        "love",
+        "breakup"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DZHzaDFknZq",
+      "url": "https://www.threads.com/@mayukichou/post/DZHzaDFknZq",
+      "timestamp": "2026-06-03T11:23:26Z",
+      "summary": "作者批評衝突後反覆消失與不回訊息，認為這涉及處理關係的能力。",
+      "topics": [
+        "unread",
+        "communication",
+        "love",
+        "boundaries"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DV57togEbkw",
+      "url": "https://www.threads.com/@thisiskenny__/post/DV57togEbkw",
+      "timestamp": "2026-03-15T12:32:28Z",
+      "summary": "作者以朋友長時間不回訊息為例，表達不再投入心力的看法。",
+      "topics": [
+        "unread",
+        "communication",
+        "boundaries"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DcgxNYGk43d",
+      "url": "https://www.threads.com/@ycc_8578/post/DcgxNYGk43d",
+      "timestamp": "2026-08-26T17:39:25Z",
+      "summary": "作者向讀者提問，是否相信異性之間存在純粹的友誼。",
+      "topics": [
+        "friendship",
+        "trust"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DdBjv1UE8Ik",
+      "url": "https://www.threads.com/@xixi_64320/post/DdBjv1UE8Ik",
+      "timestamp": "2026-09-08T11:16:44Z",
+      "summary": "作者列舉吃飯、頻繁聊天與問候等情境，詢問伴侶和異性互動的界線。",
+      "topics": [
+        "friendship",
+        "boundaries",
+        "trust",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DZEndJNj3iV",
+      "url": "https://www.threads.com/@lichen.0924/post/DZEndJNj3iV",
+      "timestamp": "2026-06-02T05:41:17Z",
+      "summary": "作者質疑把親近的異性朋友預設為曖昧，主張欣賞、信任與陪伴不必都被定義為愛情。",
+      "topics": [
+        "friendship",
+        "trust",
+        "listening",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DdtiocBH4os",
+      "url": "https://www.threads.com/@liaorenpeng/post/DdtiocBH4os",
+      "timestamp": "2026-09-25T13:13:34Z",
+      "summary": "作者表達疲累時缺乏情緒支持的難過。",
+      "topics": [
+        "support",
+        "listening",
+        "value"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DZXy3WFEoh2",
+      "url": "https://www.threads.com/@lianliansun/post/DZXy3WFEoh2",
+      "timestamp": "2026-06-09T16:26:33Z",
+      "summary": "作者提問：承接伴侶的情緒是否是關係中的必要責任。",
+      "topics": [
+        "support",
+        "value",
+        "boundaries",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DPO7wK-k0TC",
+      "url": "https://www.threads.com/@light.in.pages/post/DPO7wK-k0TC",
+      "timestamp": "2025-09-30T16:37:06Z",
+      "summary": "作者將被理解的感受與實際解決問題相比，強調情緒陪伴的價值。",
+      "topics": [
+        "support",
+        "listening",
+        "value",
+        "communication"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DciBmtJEcA2",
+      "url": "https://www.threads.com/@4180.cathyyyyyy/post/DciBmtJEcA2",
+      "timestamp": "2026-08-27T05:21:56Z",
+      "summary": "作者反思伴侶說出不舒服時的擔心，並描述主動靠近、讓對方知道需求不是負擔的回應。",
+      "topics": [
+        "support",
+        "security",
+        "communication",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "Ddja0zbEp1K",
+      "url": "https://www.threads.com/@slowmindtalks/post/Ddja0zbEp1K",
+      "timestamp": "2026-09-21T14:52:57Z",
+      "summary": "作者將情緒穩定理解為衝突時仍願意溝通、尊重與修復，而非永遠沒有情緒。",
+      "topics": [
+        "support",
+        "communication",
+        "boundaries",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DdvhhdtFCwK",
+      "url": "https://www.threads.com/@angeljg417/post/DdvhhdtFCwK",
+      "timestamp": "2026-09-26T07:42:21Z",
+      "summary": "回覆者描述一段關係裡對責任、共同未來與情緒支持的期待落差。",
+      "topics": [
+        "value",
+        "money",
+        "fairness",
+        "future",
+        "breakup"
+      ],
+      "kind": "reply",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "Ddvkgs-CZhD",
+      "url": "https://www.threads.com/@brogd88/post/Ddvkgs-CZhD",
+      "timestamp": "2026-09-26T08:08:28Z",
+      "summary": "作者回應長期關係結束的故事，認為經濟困境之外，也應關注上進與情緒付出是否互惠。",
+      "topics": [
+        "value",
+        "fairness",
+        "sunk",
+        "breakup"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DdvkcYamXDZ",
+      "url": "https://www.threads.com/@oqoz_tina/post/DdvkcYamXDZ",
+      "timestamp": "2026-09-26T08:07:53Z",
+      "summary": "作者分享早餐服務中的手寫文字，把日常消費連結到情緒支持的感受。",
+      "topics": [
+        "value",
+        "daily"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DPc96m6E059",
+      "url": "https://www.threads.com/@waawaa5555/post/DPc96m6E059",
+      "timestamp": "2025-10-06T03:25:22Z",
+      "summary": "作者明知不想與伴侶共度一生，仍對放下關係與被遺忘感到不捨。",
+      "topics": [
+        "breakup",
+        "sunk",
+        "future",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DStZuZ6D9J2",
+      "url": "https://www.threads.com/@luckylove.520/post/DStZuZ6D9J2",
+      "timestamp": "2025-12-26T02:10:24Z",
+      "summary": "作者描述相處融洽卻對未來生活方向不同，因難以妥協而分開的經驗。",
+      "topics": [
+        "breakup",
+        "future",
+        "communication",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DdeQIFaki2F",
+      "url": "https://www.threads.com/@a.cc_zzzz/post/DdeQIFaki2F",
+      "timestamp": "2026-09-19T14:43:15Z",
+      "summary": "作者質疑為何不先結束既有關係，而選擇隱瞞並發展另一段關係。",
+      "topics": [
+        "affair",
+        "breakup",
+        "boundaries",
+        "trust"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DX8kI_0j1uW",
+      "url": "https://www.threads.com/@rof1eo_/post/DX8kI_0j1uW",
+      "timestamp": "2026-05-05T06:07:00Z",
+      "summary": "作者認為建立信任應從行為著手，而非事後要求對方接受讓其不安的事情。",
+      "topics": [
+        "trust",
+        "security",
+        "boundaries",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DcQtsiXCalT",
+      "url": "https://www.threads.com/@yyfmonica/post/DcQtsiXCalT",
+      "timestamp": "2026-08-20T12:00:53Z",
+      "summary": "作者詢問離婚者決定離開的轉折，是重大事件，還是長期期待耗盡。",
+      "topics": [
+        "marriage",
+        "breakup",
+        "sunk",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DTsNeLiCeuD",
+      "url": "https://www.threads.com/@self.iei7zf/post/DTsNeLiCeuD",
+      "timestamp": "2026-01-19T11:35:29Z",
+      "summary": "作者以父母在家少有交集的記憶，對照自己婚後對相處距離的理解。",
+      "topics": [
+        "marriage",
+        "communication",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DXrFX66Eso1",
+      "url": "https://www.threads.com/@little_ouu/post/DXrFX66Eso1",
+      "timestamp": "2026-04-28T11:11:04Z",
+      "summary": "作者分享婚姻溝通陷入僵局後尋求協助的經驗，將改變焦點放在共同調整對話方式。",
+      "topics": [
+        "marriage",
+        "communication",
+        "listening",
+        "love"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "Dbk7lkxEyML",
+      "url": "https://www.threads.com/@applerm0323/post/Dbk7lkxEyML",
+      "timestamp": "2026-08-03T11:55:41Z",
+      "summary": "作者以徵集故事的形式，邀請讀者分享發現出軌線索的經驗；本樣本不收錄留言中的個人指控。",
+      "topics": [
+        "affair",
+        "trust"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    },
+    {
+      "id": "DQYe_VsEQmN",
+      "url": "https://www.threads.com/@__e.wanggg/post/DQYe_VsEQmN",
+      "timestamp": "2025-10-29T06:09:34Z",
+      "summary": "作者描述發現伴侶不忠線索時的震驚與情緒衝擊。",
+      "topics": [
+        "affair",
+        "trust",
+        "security"
+      ],
+      "kind": "post",
+      "verifiedAt": "2026-09-26T08:24:00Z",
+      "classification": "editorial",
+      "sourceMethod": "visible_threads_search"
+    }
+  ]
+}
