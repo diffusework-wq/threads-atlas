@@ -27,7 +27,8 @@ export class Graph3D {
   reset(){this.release();this.sim=new GraphPhysics();if(this.graph){this.sim.setGraph(this.graph);for(let i=0;i<180;i++)this.sim.step(1/120);}this.resetCamera();}
   zoom(f){this.camera.position.sub(this.controls.target).multiplyScalar(1/f).clampLength(130,1400).add(this.controls.target);this.controls.update();}
   setGraph(graph,selected){
-    this.setHover(null);this.release();this.graph=graph;this.selected=selected;
+    if(!graph.nodes.some(n=>n.id===this.hovered))this.setHover(null);
+    this.release();this.graph=graph;this.selected=selected;
     const signature=JSON.stringify(graph);if(signature!==this.signature){
       this.signature=signature;this.sim.setGraph(graph);
       for(const {mesh,sprite,label}of this.items.values()){this.scene.remove(mesh,sprite);mesh.material.dispose();sprite.material.dispose();label.remove();}this.items.clear();
@@ -61,7 +62,7 @@ export class Graph3D {
     this.host.setPointerCapture(e.pointerId);this.host.classList.add('dragging');
   }
   move(e){if(!this.drag){if(e.buttons||e.pointerType==='touch'){this.setHover(null);return;}this.cast(e);this.setHover(e.target.closest('[data-node]')?.dataset.node||this.ray.intersectObjects([...this.items.values()].map(x=>x.mesh))[0]?.object.userData.id);return;}if(e.pointerId!==this.drag.pointerId)return;this.cast(e);if(this.ray.ray.intersectPlane(this.plane,this.hit)){this.hit.add(this.offset).clampLength(0,650);const p=this.sim.nodes.get(this.drag.id);p.x=this.hit.x;p.y=this.hit.y;p.z=this.hit.z;}}
-  up(e){const start=this.start,click=start&&Math.hypot(e.clientX-start.x,e.clientY-start.y)<5;this.release();this.start=null;if(click){if(start.id)this.onSelect(start.id);else if(start.edge)this.onEdge(start.edge);}}
+  up(e){const start=this.start,click=start&&Math.hypot(e.clientX-start.x,e.clientY-start.y)<5;this.release();this.start=null;if(click){if(start.id){this.onSelect(start.id);if(e.pointerType!=='touch')this.setHover(start.id);}else if(start.edge)this.onEdge(start.edge);}}
   release(){if(this.drag){const p=this.sim.nodes.get(this.drag.id);if(p)p.pinned=false;const id=this.drag.pointerId;this.drag=null;if(this.host.hasPointerCapture(id))this.host.releasePointerCapture(id);}this.controls.enabled=true;this.host.classList.remove('dragging');}
   project(p){return new THREE.Vector3(p.x,p.y,p.z).project(this.camera);}
   draw(){

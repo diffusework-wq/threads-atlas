@@ -11,7 +11,7 @@ export function filterPosts(data, {query='',period='all',selected=null}={}) {
   const anchor=Date.parse(data.capturedAt), q=query.trim().toLocaleLowerCase(), labels=new Map(data.topics.map(t=>[t.id,t.label]));
   return data.posts.filter(p=> {
     const time=Date.parse(p.timestamp);
-    return (period==='all'||(time<=anchor&&time>=anchor-Number(period)*86400000)) && (!selected||p.topics.includes(selected)) && (!q||[p.summary,...p.topics.map(id=>labels.get(id)||'')].join(' ').toLocaleLowerCase().includes(q));
+    return (period==='all'||(time<=anchor&&time>=anchor-Number(period)*86400000)) && (!selected||p.topics.includes(selected)) && (!q||[p.text,p.originalText,p.summary,...p.topics.map(id=>labels.get(id)||'')].join(' ').toLocaleLowerCase().includes(q));
   });
 }
 export function makeGraph(data,posts,{nodeLimit=Infinity,selected=null}={}) {

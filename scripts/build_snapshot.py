@@ -62,6 +62,10 @@ def build():
             'note':'資料以搜尋頁可見內容核對，非隨機抽樣；不含按讚數推估，不保證原文永久可用。',
             'topics':[dict(id=i,label=l,group=g,seed=s,description=d,**({'angles':a} if a else {})) for i,l,g,s,d,a in topics],
             'posts':[dict(id=code,url=f'https://www.threads.com/@{author}/post/{code}',timestamp=ts,summary=summary,topics=tags,kind=kind,verifiedAt=CAPTURED,classification='editorial',sourceMethod='visible_threads_search') for author,code,ts,summary,tags,kind in rows]}
+    originals = json.loads((ROOT/'scripts'/'public_originals.json').read_text(encoding='utf-8'))
+    for post in data['posts']:
+        if post['id'] in originals['excerpts']:
+            post.update(originalText=originals['excerpts'][post['id']], originalTextKind='verbatim_excerpt', originalVerifiedAt=originals['verifiedAt'])
     path = ROOT/'site'/'data'/'snapshot.json'
     path.parent.mkdir(parents=True,exist_ok=True)
     path.write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')

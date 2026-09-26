@@ -1,10 +1,18 @@
 export function voiceExcerpt(post) {
   const personal=post.kind==='personal';
-  const text=(personal?post.text:post.summary)||'';
+  const text=(personal?post.text:post.originalText)||'';
   let author=post.author;
   if(!author){try{author=new URL(post.url).pathname.split('/')[1]?.replace(/^@/,'');}catch{}}
-  return {author:author?'@'+author:'來源作者',text:text.length>240?text.slice(0,240)+'…':text,
-    kind:personal?'收錄文字摘錄 · 未核對':post.kind==='reply'?'回覆觀點 · 編輯摘要':'貼文觀點 · 編輯摘要'};
+  return {author:author?'@'+author:'來源作者',text,
+    kind:personal?'收錄原文 · 未核對':'公開原文摘錄'};
+}
+
+export function voiceQueue(posts){
+  return posts.flatMap(post=>{
+    const voice=voiceExcerpt(post),characters=Array.from(voice.text),parts=[];
+    for(let i=0;i<characters.length;i+=160)parts.push({...voice,text:characters.slice(i,i+160).join('')});
+    return parts;
+  });
 }
 
 export class HoverVoices {
@@ -23,10 +31,16 @@ export class HoverVoices {
     clearTimeout(this.hideTimer);this.hideTimer=null;this.panel.classList.remove('is-leaving');
     this.anchor=anchor;
     if(this.id!==id){
-      this.posts=this.getPosts(id);if(!this.posts.length){this.hide();return;}
+      this.posts=voiceQueue(this.getPosts(id));if(!this.posts.length){this.hide();return;}
       this.id=id;this.index=0;this.panel.hidden=false;this.render();
     }
     this.place();
+  }
+  refresh(){
+    if(!this.id)return;
+    const posts=voiceQueue(this.getPosts(this.id));
+    if(!posts.length){this.hide();return;}
+    if(JSON.stringify(posts)!==JSON.stringify(this.posts)){this.posts=posts;this.index=0;this.render();}
   }
   place(){
     if(!this.anchor||this.panel.hidden)return;
@@ -39,13 +53,13 @@ export class HoverVoices {
   hide(){clearTimeout(this.hideTimer);clearTimeout(this.timer);this.animation?.cancel();this.hideTimer=null;this.id=null;this.panel.hidden=true;}
   render(){
     clearTimeout(this.timer);this.animation?.cancel();
-    const v=voiceExcerpt(this.posts[this.index]);
+    const v=this.posts[this.index];
     this.body.textContent=v.text;
     this.panel.setAttribute('aria-label',(this.getTopic(this.id)?.label||'話題')+' · '+v.kind);
     this.place();
-    if(this.reduced.matches||document.hidden)return;
-    const duration=Math.max(6000,Math.min(12000,v.text.length*48));
-    this.animation=this.body.animate([
+    if(document.hidden)return;
+    const duration=Math.max(4200,Math.min(10000,v.text.length*65));
+    if(!this.reduced.matches)this.animation=this.body.animate([
       {opacity:0,transform:'translate(28px,40px)',offset:0},
       {opacity:.92,transform:'translate(17px,17px)',offset:.17},
       {opacity:.92,transform:'translate(0,-8px)',offset:.73},
