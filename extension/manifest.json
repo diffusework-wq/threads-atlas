@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "話題星圖 · Threads 本機收藏",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "在你開啟 Threads 貼文時，依你的設定保存在本機星圖；預設關閉自動收錄。",
   "minimum_chrome_version": "116",
   "permissions": [

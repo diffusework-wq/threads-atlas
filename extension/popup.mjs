@@ -3,6 +3,8 @@ const send = (action, payload = {}) => chrome.runtime.sendMessage({channel: 'thr
 let library;
 let tab;
 let preview;
+const diagnosticLines=['話題星圖 '+chrome.runtime.getManifest().version];
+function diagnostic(key,value){diagnosticLines.push(key+': '+value);$('#diagnostics').value=diagnosticLines.join('\n');}
 function status(message, error = false) { $('#status').textContent = message; $('#status').style.color = error ? '#efacb5' : '#b6ddcb'; }
 function renderLibrary(next) {
   library = next;
@@ -49,7 +51,19 @@ $('#export').addEventListener('click', async () => {
 });
 try {
   await refresh();
+  diagnostic('背景服務','正常');diagnostic('自動收錄',library.enabled?'開啟':'關閉');
   [tab] = await chrome.tabs.query({active: true, currentWindow: true});
+  let onThreads=false;
+  try{onThreads=['www.threads.com','threads.com','www.threads.net','threads.net'].includes(new URL(tab?.url).hostname);}catch{}
+  diagnostic('目前分頁',onThreads?'Threads':'非 Threads，請先切到貼文分頁');
+  try{
+    const info=await chrome.tabs.sendMessage(tab.id,{type:'threads-atlas-diagnostics'});
+    if(info?.ok){
+      diagnostic('頁面連線','正常');
+      const d=info.diagnostics;
+      for(const [key,label] of Object.entries({page:'頁面類型',postLinks:'貼文連結數',timestampLinks:'時間連結數',saveButtons:'已加入收藏按鈕數',currentPostRecognized:'主貼文辨識',autoEnabled:'頁面自動收錄',eligibleVisit:'開啟動作符合收錄',savedThisVisit:'本次已收錄',lastFailure:'收錄訊息'}))diagnostic(label,d[key]??'不適用');
+    }else diagnostic('頁面連線','舊版或未回傳診斷；請重新整理 Threads');
+  }catch{diagnostic('頁面連線','未連接。可能未重新整理、未授予網站存取權限，或頁面腳本未啟動。');}
   let response;
   try { response = tab?.id ? await chrome.tabs.sendMessage(tab.id, {type: 'threads-atlas-preview'}) : null; }
   catch { response = null; }
@@ -61,6 +75,6 @@ try {
     $('#save').disabled = false;
     if (response.lastFailure) status(response.lastFailure, true);
   } else {
-    $('#preview-info').textContent = response?.error || '請在 Chrome 打開一篇 Threads 貼文詳情，再開啟插件。剛安裝時需先重新整理 Threads 頁面。';
+    $('#preview-info').textContent = response?.error || (onThreads?'插件尚未連到此 Threads 分頁。請查看下方「連線診斷」。':'請先切到 Threads 貼文詳情分頁，再開啟插件。');
   }
-} catch (error) { status(error.message, true); $('#enabled').disabled = true; }
+} catch (error) { diagnostic('背景服務','失敗；請到擴充功能管理頁查看錯誤');status(error.message, true); $('#enabled').disabled = true; }

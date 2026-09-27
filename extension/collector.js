@@ -289,6 +289,16 @@
       return;
     }
     if (sender.url !== chrome.runtime.getURL('popup.html')) return;
+    if (message?.type === 'threads-atlas-diagnostics') {
+      const links=[...document.querySelectorAll('a[href]')].filter(a=>canonical(a.href));
+      const current=canonical(location.href);
+      respond({ok:true,diagnostics:{page:current?'post':'feed',autoEnabled:enabled,
+        postLinks:links.length,timestampLinks:links.filter(a=>a.querySelector('time[datetime]')).length,
+        saveButtons:document.querySelectorAll('[data-threads-atlas="save"]').length,
+        currentPostRecognized:current?!!mainCard(current):null,
+        eligibleVisit,savedThisVisit:!!visitId&&savedVisit===visitId,lastFailure}});
+      return;
+    }
     if (message?.type === 'threads-atlas-preview') {
       try { respond({ok: true, post: extract({preferSelection: true}), lastFailure}); }
       catch (error) { respond({ok: false, error: error.message, lastFailure}); }
